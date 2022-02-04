@@ -1,0 +1,103 @@
+---
+title: View Web SQL data
+description: How to view Web SQL data from the Application panel of Microsoft Edge DevTools.
+author: MSEdgeTeam
+ms.author: msedgedevrel
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.date: 05/04/2021
+---
+<!-- Copyright Kayce Basques
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.  -->
+# View Web SQL data
+
+This article shows how to use DevTools to inspect Web SQL data.
+
+> [!WARNING]
+> The Web SQL specification is [not being maintained](https://w3.org/TR/webdatabase/#status-of-this-document).
+
+
+<!-- ====================================================================== -->
+## View Web SQL Data
+
+1. In DevTools, open the **Application** tool.  The **Manifest** pane usually opens by default.
+
+   :::image type="content" source="../media/storage-application-manifest.msft.png" alt-text="The Manifest pane." lightbox="../media/storage-application-manifest.msft.png":::
+
+1. Expand the **Web SQL** section to view databases and tables.  In the following figure, below **html5meetup** is a database and **rooms** is a table.
+
+   :::image type="content" source="../media/storage-application-storage-web-sql.msft.png" alt-text="The Web SQL pane." lightbox="../media/storage-application-storage-web-sql.msft.png":::
+
+1. Click a table to view the data for that table.
+
+:::image type="content" source="../media/storage-application-storage-web-sql-html5meetup-rooms-1.msft.png" alt-text="View the data of a Web SQL table." lightbox="../media/storage-application-storage-web-sql-html5meetup-rooms-1.msft.png":::
+
+
+<!-- ====================================================================== -->
+## Edit Web SQL data
+
+You can't edit Web SQL data when viewing a Web SQL table, such as in the previous figure.  But you can run statements from the Web SQL Console that edit or delete tables.  See [Run Web SQL queries](#run-web-sql-queries).
+
+
+<!-- ====================================================================== -->
+## Run Web SQL queries
+
+1. Click a database to open a console for that database.
+
+1. Type a Web SQL statement, then press `Enter` to run it.
+
+:::image type="content" source="../media/storage-application-storage-web-sql-html5meetup-commands.msft.png" alt-text="Use the Web SQL Console to delete a row from a table." lightbox="../media/storage-application-storage-web-sql-html5meetup-commands.msft.png":::
+
+
+<!-- ====================================================================== -->
+## Refresh a Web SQL table
+
+DevTools doesn't update tables in real-time.  To update the data in a table:
+
+1. [View the data in a Web SQL table](#view-web-sql-data).
+
+1. Click **Refresh** (![Refresh.](../media/refresh-icon.msft.png)).
+
+
+<!-- ====================================================================== -->
+## Filter out columns in a Web SQL table
+
+1. [View the data in a Web SQL table](#view-web-sql-data).
+
+1. Use the **Visible columns** text box to specify what columns you want to show.  Provide the column names as a CSV list.
+
+   :::image type="content" source="../media/storage-application-storage-web-sql-html5meetup-rooms-2.msft.png" alt-text="Use the Visible Columns text box to reduce the number of columns shown." lightbox="../media/storage-application-storage-web-sql-html5meetup-rooms-2.msft.png":::
+
+
+<!-- ====================================================================== -->
+## Delete all Web SQL data
+
+1. Open the **Clear Storage** pane.
+
+1. Make sure that the **Web SQL** checkbox is turned on.
+
+   :::image type="content" source="../media/storage-application-clear-storage-web-sql.msft.png" alt-text="The Web SQL checkbox." lightbox="../media/storage-application-clear-storage-web-sql.msft.png":::
+
+1. Click **Clear site data**.
+
+   :::image type="content" source="../media/storage-application-clear-storage-clear-site-data-button.msft.png" alt-text="The Clear Site Data button." lightbox="../media/storage-application-clear-storage-clear-site-data-button.msft.png":::
+
+
+<!-- ====================================================================== -->
+> [!NOTE]
+> Portions of this page are modifications based on work created and [shared by Google](https://developers.google.com/terms/site-policies) and used according to terms described in the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
+> The original page is found [here](https://developers.google.com/web/tools/chrome-devtools/storage/websql) and is authored by [Kayce Basques](https://developers.google.com/web/resources/contributors#kayce-basques) (Technical Writer, Chrome DevTools \& Lighthouse).
+
+[![Creative Commons License.](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
